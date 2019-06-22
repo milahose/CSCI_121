@@ -75,11 +75,19 @@ int main()
         cout << "Do you want to play another game? <Y/N>: ";
         cin >> play_again_response;
         
+        while(play_again_response != 'Y' && play_again_response != 'y' && play_again_response != 'N' && play_again_response != 'n')
+        {
+            cout << "Invalid response. Please enter \"Y\" or \"N\": ";
+            cin >> play_again_response;
+        }
         
         if (play_again_response == 'Y' || play_again_response == 'y')
+        {
             user_wants_to_play_again = true;
+        }
         else
             user_wants_to_play_again = false;
+
     }
     
     cout << "Thanks for playing! Goodbye.";
